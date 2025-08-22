@@ -36,7 +36,7 @@ const BookingModal = ({ isOpen, onClose, selectedTeacher, scheduleInfo }) => {
       return;
     }
     try {
-      const response = await fetch('http://localhost:3000/bookings/trial', {
+      const response = await fetch('https://englishtutor-be.onrender.com/bookings/trial', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
