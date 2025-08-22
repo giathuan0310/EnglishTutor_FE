@@ -64,7 +64,7 @@ const Pricing = ({ onBack, onBookingClick }) => {
     const fetchPackages = async () => {
       try {
         setLoading(true);
-        const response = await fetch('http://localhost:3000/packages');
+        const response = await fetch('https://englishtutor-be.onrender.com/packages');
         if (!response.ok) {
           throw new Error('Không thể tải danh sách gói học.');
         }
@@ -101,7 +101,7 @@ const Pricing = ({ onBack, onBookingClick }) => {
 
     try {
       // 2. Gọi API để mua gói
-      const response = await fetch('http://localhost:3000/users/purchase-package', {
+      const response = await fetch('https://englishtutor-be.onrender.com/users/purchase-package', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -18,7 +18,7 @@ const Teachers = ({ setShowBookingModal, setSelectedTeacher, onTeacherClick }) =
   useEffect(() => {
     const fetchTeachers = async () => {
       try {
-        const response = await fetch('http://localhost:3000/tutors');
+        const response = await fetch('https://englishtutor-be.onrender.com/tutors');
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }

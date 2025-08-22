@@ -34,7 +34,7 @@ const TeacherDetail = ({ teacherId, onBookingClick, onBack }) => {
       setLoading(true);
       setError(null);
       try {
-        const response = await fetch(`http://localhost:3000/tutors/${teacherId}`);
+        const response = await fetch(`https://englishtutor-be.onrender.com/tutors/${teacherId}`);
         if (!response.ok) {
           throw new Error(`Không tìm thấy giáo viên với ID: ${teacherId}`);
         }

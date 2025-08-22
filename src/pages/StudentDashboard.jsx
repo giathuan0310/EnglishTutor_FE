@@ -26,7 +26,7 @@ const StudentDashboard = ({ onNavigate, onBack }) => {
     // Hàm fetch thông tin user
     const fetchUser = async () => {
       try {
-        const res = await fetch('http://localhost:3000/users/me', {
+        const res = await fetch('https://englishtutor-be.onrender.com/users/me', {
           headers: { Authorization: `Bearer ${token}` }
         });
         if (!res.ok) throw new Error("Không thể tải thông tin học viên.");
@@ -42,7 +42,7 @@ const StudentDashboard = ({ onNavigate, onBack }) => {
     // Hàm fetch danh sách buổi học
     const fetchMyBookings = async () => {
       try {
-        const res = await fetch('http://localhost:3000/bookings/my-bookings', {
+        const res = await fetch('https://englishtutor-be.onrender.com/bookings/my-bookings', {
           headers: { Authorization: `Bearer ${token}` }
         });
         if (!res.ok) throw new Error("Không thể tải lịch sử buổi học.");
